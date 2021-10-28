@@ -7,6 +7,10 @@ app.use(express.json())
 
 const PORT = process.env.PORT || 5000
 
+app.get('/', (req, res) => {
+    res.json({message: "You have entered Kat's API"})
+})
+
 app.get('/api/users', (req, res) => {
     res.json({
         users: [
