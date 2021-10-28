@@ -17,6 +17,11 @@ app.get('/api/users', (req, res) => {
     })
 })
 
+app.post('/api/register', (req, res) => {
+    const newUser = req.body
+    res.status(201).json(newUser)
+})
+
 app.listen(PORT, () => {
     console.log(`listening on ${PORT}`)
 })
